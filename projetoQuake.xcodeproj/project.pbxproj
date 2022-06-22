@@ -11,6 +11,13 @@
 		E1939D9B286290790092C7F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939D9A286290790092C7F9 /* ContentView.swift */; };
 		E1939D9D2862907D0092C7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1939D9C2862907D0092C7F9 /* Assets.xcassets */; };
 		E1939DA02862907D0092C7F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1939D9F2862907D0092C7F9 /* Preview Assets.xcassets */; };
+		E1939DA9286292780092C7F9 /* APIContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DA8286292780092C7F9 /* APIContants.swift */; };
+		E1939DAB2862928C0092C7F9 /* QuakeEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DAA2862928C0092C7F9 /* QuakeEndpoints.swift */; };
+		E1939DAD286292B10092C7F9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DAC286292B10092C7F9 /* Theme.swift */; };
+		E1939DAF286292D00092C7F9 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DAE286292D00092C7F9 /* NetworkErrors.swift */; };
+		E1939DB1286293080092C7F9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB0286293080092C7F9 /* LoadingView.swift */; };
+		E1939DB3286293370092C7F9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB2286293370092C7F9 /* Settings.swift */; };
+		E1939DB7286294810092C7F9 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB6286294810092C7F9 /* Quake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		E1939D9A286290790092C7F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1939D9C2862907D0092C7F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1939D9F2862907D0092C7F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E1939DA8286292780092C7F9 /* APIContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIContants.swift; sourceTree = "<group>"; };
+		E1939DAA2862928C0092C7F9 /* QuakeEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeEndpoints.swift; sourceTree = "<group>"; };
+		E1939DAC286292B10092C7F9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E1939DAE286292D00092C7F9 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		E1939DB0286293080092C7F9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E1939DB2286293370092C7F9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E1939DB6286294810092C7F9 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,8 @@
 		E1939D97286290790092C7F9 /* projetoQuake */ = {
 			isa = PBXGroup;
 			children = (
+				E1939DA72862920E0092C7F9 /* Feature */,
+				E1939DA6286292040092C7F9 /* Base */,
 				E1939D98286290790092C7F9 /* projetoQuakeApp.swift */,
 				E1939D9A286290790092C7F9 /* ContentView.swift */,
 				E1939D9C2862907D0092C7F9 /* Assets.xcassets */,
@@ -65,6 +81,43 @@
 				E1939D9F2862907D0092C7F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1939DA6286292040092C7F9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DA8286292780092C7F9 /* APIContants.swift */,
+				E1939DAA2862928C0092C7F9 /* QuakeEndpoints.swift */,
+				E1939DAC286292B10092C7F9 /* Theme.swift */,
+				E1939DAE286292D00092C7F9 /* NetworkErrors.swift */,
+				E1939DB0286293080092C7F9 /* LoadingView.swift */,
+				E1939DB2286293370092C7F9 /* Settings.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E1939DA72862920E0092C7F9 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DB4286294690092C7F9 /* Quake */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		E1939DB4286294690092C7F9 /* Quake */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DB5286294720092C7F9 /* Model */,
+			);
+			path = Quake;
+			sourceTree = "<group>";
+		};
+		E1939DB5286294720092C7F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DB6286294810092C7F9 /* Quake.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +192,13 @@
 			files = (
 				E1939D9B286290790092C7F9 /* ContentView.swift in Sources */,
 				E1939D99286290790092C7F9 /* projetoQuakeApp.swift in Sources */,
+				E1939DB3286293370092C7F9 /* Settings.swift in Sources */,
+				E1939DAD286292B10092C7F9 /* Theme.swift in Sources */,
+				E1939DB7286294810092C7F9 /* Quake.swift in Sources */,
+				E1939DAB2862928C0092C7F9 /* QuakeEndpoints.swift in Sources */,
+				E1939DA9286292780092C7F9 /* APIContants.swift in Sources */,
+				E1939DB1286293080092C7F9 /* LoadingView.swift in Sources */,
+				E1939DAF286292D00092C7F9 /* NetworkErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
