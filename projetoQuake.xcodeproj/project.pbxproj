@@ -19,6 +19,12 @@
 		E1939DB3286293370092C7F9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB2286293370092C7F9 /* Settings.swift */; };
 		E1939DB7286294810092C7F9 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB6286294810092C7F9 /* Quake.swift */; };
 		E1939DB92863E1C80092C7F9 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB82863E1C80092C7F9 /* QuakeError.swift */; };
+		E1939DBF28653B960092C7F9 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DBE28653B960092C7F9 /* EmptyView.swift */; };
+		E1939DC128653BA60092C7F9 /* QuakesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC028653BA60092C7F9 /* QuakesView.swift */; };
+		E1939DC328653BF40092C7F9 /* QuakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC228653BF40092C7F9 /* QuakeService.swift */; };
+		E1939DC528653CF00092C7F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC428653CF00092C7F9 /* DetailView.swift */; };
+		E1939DC728653D000092C7F9 /* QuakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC628653D000092C7F9 /* QuakeView.swift */; };
+		E1939DC928653D4C0092C7F9 /* QuakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		E1939DB2286293370092C7F9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E1939DB6286294810092C7F9 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		E1939DB82863E1C80092C7F9 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
+		E1939DBE28653B960092C7F9 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		E1939DC028653BA60092C7F9 /* QuakesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesView.swift; sourceTree = "<group>"; };
+		E1939DC228653BF40092C7F9 /* QuakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeService.swift; sourceTree = "<group>"; };
+		E1939DC428653CF00092C7F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E1939DC628653D000092C7F9 /* QuakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeView.swift; sourceTree = "<group>"; };
+		E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,10 @@
 		E1939DB4286294690092C7F9 /* Quake */ = {
 			isa = PBXGroup;
 			children = (
+				E1939DBD28653B1F0092C7F9 /* ViewModel */,
+				E1939DBC28653B120092C7F9 /* View */,
+				E1939DBB28653B080092C7F9 /* Service */,
+				E1939DBA28653AFE0092C7F9 /* Screen */,
 				E1939DB5286294720092C7F9 /* Model */,
 			);
 			path = Quake;
@@ -121,6 +137,40 @@
 				E1939DB82863E1C80092C7F9 /* QuakeError.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E1939DBA28653AFE0092C7F9 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DBE28653B960092C7F9 /* EmptyView.swift */,
+				E1939DC028653BA60092C7F9 /* QuakesView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		E1939DBB28653B080092C7F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DC228653BF40092C7F9 /* QuakeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E1939DBC28653B120092C7F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DC428653CF00092C7F9 /* DetailView.swift */,
+				E1939DC628653D000092C7F9 /* QuakeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1939DBD28653B1F0092C7F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +245,12 @@
 			files = (
 				E1939DB92863E1C80092C7F9 /* QuakeError.swift in Sources */,
 				E1939D9B286290790092C7F9 /* ContentView.swift in Sources */,
+				E1939DC928653D4C0092C7F9 /* QuakeViewModel.swift in Sources */,
+				E1939DC328653BF40092C7F9 /* QuakeService.swift in Sources */,
+				E1939DC528653CF00092C7F9 /* DetailView.swift in Sources */,
+				E1939DBF28653B960092C7F9 /* EmptyView.swift in Sources */,
 				E1939D99286290790092C7F9 /* projetoQuakeApp.swift in Sources */,
+				E1939DC128653BA60092C7F9 /* QuakesView.swift in Sources */,
 				E1939DB3286293370092C7F9 /* Settings.swift in Sources */,
 				E1939DAD286292B10092C7F9 /* Theme.swift in Sources */,
 				E1939DB7286294810092C7F9 /* Quake.swift in Sources */,
@@ -203,6 +258,7 @@
 				E1939DA9286292780092C7F9 /* APIContants.swift in Sources */,
 				E1939DB1286293080092C7F9 /* LoadingView.swift in Sources */,
 				E1939DAF286292D00092C7F9 /* NetworkErrors.swift in Sources */,
+				E1939DC728653D000092C7F9 /* QuakeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
