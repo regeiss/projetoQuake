@@ -18,7 +18,7 @@ struct QuakesScreen: View {
              
              if vm.quakes.isEmpty {
                  
-                 LoadingView()
+                 LoadingView(text: "Fetching ...")
                  
              } else {
                  
