@@ -23,9 +23,7 @@ final class QuakesViewModelImpl: QuakesViewModel
         case failed(error: Error)
     }
 
-    @Published private(set) var Quakes: [Quake] = []
-    @Published private(set) var state: State = .na
-    @Published var hasError: Bool = false
+    @Published private(set) var quakes: [Quake] = []
     
     private let service: QuakesService
 
@@ -36,17 +34,13 @@ final class QuakesViewModelImpl: QuakesViewModel
     
     func getAllQuakes() async
     {
-        self.state = .loading
-        self.hasError = false
         do
         {
-            let data = try await service.fetch()
-            self.state = .success(data: data)
+            self.quakes = try await service.fetch()
         }
         catch
         {
-            self.state = .failed(error: error)
-            self.hasError = true
+            print(error)
         }
     }
 }

@@ -30,7 +30,7 @@ extension QuakeAPI: APIBuilder {
     var path: String {
         switch self {
         case .getNews:
-            return "/news"
+            return "/1"
 
         }
     }

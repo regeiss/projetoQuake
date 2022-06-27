@@ -11,7 +11,7 @@ import SwiftUI
 struct projetoQuakeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuakesScreen()
         }
     }
 }

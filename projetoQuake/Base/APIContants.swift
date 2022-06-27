@@ -9,5 +9,5 @@ import Foundation
 
 enum APIConstants
 {
-    static let baseUrl = "v"
+    static let baseUrl = "https://earthquake.usgs.gov/fdsnws/event/1/"
 }

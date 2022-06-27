@@ -20,11 +20,12 @@
 		E1939DB7286294810092C7F9 /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB6286294810092C7F9 /* Quake.swift */; };
 		E1939DB92863E1C80092C7F9 /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DB82863E1C80092C7F9 /* QuakeError.swift */; };
 		E1939DBF28653B960092C7F9 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DBE28653B960092C7F9 /* EmptyView.swift */; };
-		E1939DC128653BA60092C7F9 /* QuakesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC028653BA60092C7F9 /* QuakesView.swift */; };
+		E1939DC128653BA60092C7F9 /* QuakesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC028653BA60092C7F9 /* QuakesScreen.swift */; };
 		E1939DC328653BF40092C7F9 /* QuakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC228653BF40092C7F9 /* QuakeService.swift */; };
 		E1939DC528653CF00092C7F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC428653CF00092C7F9 /* DetailView.swift */; };
 		E1939DC728653D000092C7F9 /* QuakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC628653D000092C7F9 /* QuakeView.swift */; };
 		E1939DC928653D4C0092C7F9 /* QuakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */; };
+		E1939DCC2868B34F0092C7F9 /* View+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1939DCB2868B34F0092C7F9 /* View+Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,11 +43,12 @@
 		E1939DB6286294810092C7F9 /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		E1939DB82863E1C80092C7F9 /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
 		E1939DBE28653B960092C7F9 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		E1939DC028653BA60092C7F9 /* QuakesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesView.swift; sourceTree = "<group>"; };
+		E1939DC028653BA60092C7F9 /* QuakesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesScreen.swift; sourceTree = "<group>"; };
 		E1939DC228653BF40092C7F9 /* QuakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeService.swift; sourceTree = "<group>"; };
 		E1939DC428653CF00092C7F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E1939DC628653D000092C7F9 /* QuakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeView.swift; sourceTree = "<group>"; };
 		E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeViewModel.swift; sourceTree = "<group>"; };
+		E1939DCB2868B34F0092C7F9 /* View+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Preview.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		E1939DA6286292040092C7F9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1939DCA2868B3270092C7F9 /* Extensions */,
 				E1939DA8286292780092C7F9 /* APIContants.swift */,
 				E1939DAA2862928C0092C7F9 /* QuakeEndpoints.swift */,
 				E1939DAC286292B10092C7F9 /* Theme.swift */,
@@ -143,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E1939DBE28653B960092C7F9 /* EmptyView.swift */,
-				E1939DC028653BA60092C7F9 /* QuakesView.swift */,
+				E1939DC028653BA60092C7F9 /* QuakesScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -171,6 +174,14 @@
 				E1939DC828653D4C0092C7F9 /* QuakeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1939DCA2868B3270092C7F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1939DCB2868B34F0092C7F9 /* View+Preview.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,13 +261,14 @@
 				E1939DC528653CF00092C7F9 /* DetailView.swift in Sources */,
 				E1939DBF28653B960092C7F9 /* EmptyView.swift in Sources */,
 				E1939D99286290790092C7F9 /* projetoQuakeApp.swift in Sources */,
-				E1939DC128653BA60092C7F9 /* QuakesView.swift in Sources */,
+				E1939DC128653BA60092C7F9 /* QuakesScreen.swift in Sources */,
 				E1939DB3286293370092C7F9 /* Settings.swift in Sources */,
 				E1939DAD286292B10092C7F9 /* Theme.swift in Sources */,
 				E1939DB7286294810092C7F9 /* Quake.swift in Sources */,
 				E1939DAB2862928C0092C7F9 /* QuakeEndpoints.swift in Sources */,
 				E1939DA9286292780092C7F9 /* APIContants.swift in Sources */,
 				E1939DB1286293080092C7F9 /* LoadingView.swift in Sources */,
+				E1939DCC2868B34F0092C7F9 /* View+Preview.swift in Sources */,
 				E1939DAF286292D00092C7F9 /* NetworkErrors.swift in Sources */,
 				E1939DC728653D000092C7F9 /* QuakeView.swift in Sources */,
 			);
