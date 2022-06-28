@@ -40,6 +40,7 @@ final class QuakesViewModelImpl: QuakesViewModel
         }
         catch
         {
+            print("ocorreu um erro")
             print(error)
         }
     }

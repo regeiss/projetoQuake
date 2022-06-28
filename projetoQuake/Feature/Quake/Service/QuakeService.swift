@@ -25,6 +25,7 @@ final class QuakesServiceImpl: QuakesService
         {
             let urlSession = URLSession.shared
             let url = URL(string: APIConstants.baseUrl.appending("query?format=geojson&starttime=2014-01-01&endtime=2014-01-02")) // ajustar
+            print(url!)
             let (data, _) = try await urlSession.data(from: url!)
             return try JSONDecoder().decode([Quake].self, from: data)
         }
