@@ -29,3 +29,31 @@ final class QuakesServiceImpl: QuakesService
             return try JSONDecoder().decode([Quake].self, from: data)
         }
 }
+
+   /// Fetches the earthquake feed from the remote server, and imports it into Core Data.
+    func fetchQuakes() async throws {
+        let session = URLSession.shared
+        guard let (data, response) = try? await session.data(from: url),
+              let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200
+        else {
+            logger.debug("Failed to received valid response and/or data.")
+            throw QuakeError.missingData
+        }
+
+        do {
+            // Decode the GeoJSON into a data model.
+            let jsonDecoder = JSONDecoder()
+            jsonDecoder.dateDecodingStrategy = .secondsSince1970
+            let geoJSON = try jsonDecoder.decode(GeoJSON.self, from: data)
+            let quakePropertiesList = geoJSON.quakePropertiesList
+            logger.debug("Received \(quakePropertiesList.count) records.")
+
+            // Import the GeoJSON into Core Data.
+            logger.debug("Start importing data to the store...")
+            try await importQuakes(from: quakePropertiesList)
+            logger.debug("Finished importing data.")
+        } catch {
+            throw QuakeError.wrongDataFormat(error: error)
+        }
+    }
