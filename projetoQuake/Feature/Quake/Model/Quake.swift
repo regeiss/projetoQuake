@@ -63,26 +63,26 @@ extension Quake {
         }
     }
     
-    /// An earthquake for use with canvas previews.
-    static var preview: Quake {
-        let quakes = Quake.makePreviews(count: 1)
-        return quakes[0]
-    }
-
-    @discardableResult
-    static func makePreviews(count: Int) -> [Quake] {
-        var quakes = [Quake]()
-        let viewContext = QuakesProvider.preview.container.viewContext
-        for index in 0..<count {
-            let quake = Quake(context: viewContext)
-            quake.code = UUID().uuidString
-            quake.time = Date().addingTimeInterval(Double(index) * -300)
-            quake.magnitude = .random(in: -1.1...10.0)
-            quake.place = "15km SSW of Cupertino, CA"
-            quakes.append(quake)
-        }
-        return quakes
-    }
+//    /// An earthquake for use with canvas previews.
+//    static var preview: Quake {
+//        let quakes = Quake.makePreviews(count: 1)
+//        return quakes[0]
+//    }
+//
+//    @discardableResult
+//    static func makePreviews(count: Int) -> [Quake] {
+//        var quakes = [Quake]()
+//        let viewContext = QuakesProvider.preview.container.viewContext
+//        for index in 0..<count {
+//            let quake = Quake(context: viewContext)
+//            quake.code = UUID().uuidString
+//            quake.time = Date().addingTimeInterval(Double(index) * -300)
+//            quake.magnitude = .random(in: -1.1...10.0)
+//            quake.place = "15km SSW of Cupertino, CA"
+//            quakes.append(quake)
+//        }
+//        return quakes
+//    }
 }
 
 // MARK: - Codable
@@ -185,6 +185,16 @@ struct QuakeProperties: Decodable {
             "place": place,
             "time": Date(timeIntervalSince1970: TimeInterval(time) / 1000),
             "code": code
+        ]
+    }
+}
+
+extension QuakeProperties {
+    
+    static var dummyData: [Quake] {
+        
+        [
+            QuakeProperties(magnitude: "Anime 1", place: "Character 1", time: "Random Quote 1", code: "111")
         ]
     }
 }

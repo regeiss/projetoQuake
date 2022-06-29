@@ -14,8 +14,8 @@ struct QuakeView: View
     {
         VStack(alignment: .leading, spacing: 8)
         {
-             Text(makeAttributedString(title:"magnitude", label:String(item.magnitude)))
-             Text(makeAttributedString(title:"lugar", label: item.place))
+            Text(makeAttributedString(title:"magnitude", label:String(item.magnitude)))
+            Text(makeAttributedString(title:"lugar", label: item.place))
             Text(makeAttributedString(title:"hora", label: item.time.formatted()))
          }
          .padding()
